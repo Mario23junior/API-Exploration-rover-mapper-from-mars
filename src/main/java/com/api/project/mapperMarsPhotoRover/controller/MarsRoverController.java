@@ -1,5 +1,7 @@
 package com.api.project.mapperMarsPhotoRover.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,8 +20,8 @@ public class MarsRoverController {
 		this.service = service;
  	}
 	
-	@GetMapping()
-	public MarsRoverResponse listAllDataBase(@RequestParam(required=false) String marsRoverData,
+	@GetMapping
+	public List<MarsRoverResponse> listAllDataBase(@RequestParam(required=false) String date,
 			@RequestParam(required = false) Integer marsSol,
 	        @RequestParam(required = false) String robomars,
 	        @RequestParam(required = false) String camera,

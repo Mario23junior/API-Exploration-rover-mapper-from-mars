@@ -1,5 +1,8 @@
 package com.api.project.mapperMarsPhotoRover.service;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -18,7 +21,7 @@ public class ServiceMarsRover {
 		this.webClient = webClient;
 	}
 
-	public MarsRoverResponse MarsRoverBase(Integer marsSol , String roverType, String camera, Integer page) {
+	public List<MarsRoverResponse> MarsRoverBase(Integer marsSol , String roverType, String camera, Integer page) {
  			String urlAPI = "/mars-photos/api/v1/rovers/"+roverType+"/photos?"+camera+"&sol="+marsSol+"&page="+page+"&api_key="+keyAPI;
  			
 		Mono<MarsRoverResponse> bodyResponse = this.webClient
@@ -26,9 +29,12 @@ public class ServiceMarsRover {
 				.uri(urlAPI)
 				.retrieve()
 				.bodyToMono(MarsRoverResponse.class);
-		MarsRoverResponse marsRoberBase = bodyResponse.block();
-		System.out.println(marsRoberBase);
-		return marsRoberBase;
+		
+		MarsRoverResponse marsResponseBase = bodyResponse.block();
+		List<MarsRoverResponse> dataMars = Arrays.asList(marsResponseBase);
+		
+		System.out.println(dataMars.toString());
+		return dataMars;
 		
   	}
 }

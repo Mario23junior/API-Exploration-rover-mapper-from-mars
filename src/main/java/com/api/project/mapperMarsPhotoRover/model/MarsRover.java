@@ -47,5 +47,12 @@ public class MarsRover {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	@Override
+	public String toString() {
+		return "MarsRover [id=" + id + ", nome=" + nome + ", landingDate=" + landingDate + ", status=" + status + "]";
+	}
+	
+	
 }
 

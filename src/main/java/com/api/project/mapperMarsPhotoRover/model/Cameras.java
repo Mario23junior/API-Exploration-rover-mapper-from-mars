@@ -11,7 +11,7 @@ public class Cameras {
 	@JsonProperty("rover_id")
 	private String roverId;
 	
-	@JsonProperty("rover_name")
+	@JsonProperty("full_name")
 	private String fullName;
 
 	public Long getId() {
@@ -45,7 +45,12 @@ public class Cameras {
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Cameras [id=" + id + ", name=" + name + ", roverId=" + roverId + ", fullName=" + fullName + "]";
+	}
+
 	
 	
 }

@@ -7,11 +7,13 @@ public class MarsRoverResponse {
 
 	List<MarsPhoto> photos = new ArrayList<>();
 
+	 
 	@Override
 	public String toString() {
- 		return "Mars rover carga base [Photos = "+ photos +"]";
+		return "MarsRoverResponse [photos=" + photos + "]";
 	}
-	
+
+
 	public List<MarsPhoto> getPhotos() {
 		return photos;
 	}
