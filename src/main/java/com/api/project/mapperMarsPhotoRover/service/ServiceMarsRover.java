@@ -14,21 +14,20 @@ public class ServiceMarsRover {
 	private WebClient webClient;
 	private String keyAPI = "O9GhnLpLgZPJ6ZvdMEaDtqXZUmnbdVC1tlf9SG55&";
 
-//	                                     curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
-
 	public ServiceMarsRover(WebClient webClient) {
 		this.webClient = webClient;
 	}
 
-	public MarsRoverResponse MarsRoverBase(String date ,String roverType) {
-		String urlAPI = "/mars-photos/api/v1/rovers/"+roverType+"photos?"+date+"&api_key"+keyAPI;
-		
+	public MarsRoverResponse MarsRoverBase(Integer marsSol , String roverType, String camera, Integer page) {
+ 			String urlAPI = "/mars-photos/api/v1/rovers/"+roverType+"/photos?"+camera+"&sol="+marsSol+"&page="+page+"&api_key="+keyAPI;
+ 			
 		Mono<MarsRoverResponse> bodyResponse = this.webClient
 				.method(HttpMethod.GET)
 				.uri(urlAPI)
 				.retrieve()
 				.bodyToMono(MarsRoverResponse.class);
 		MarsRoverResponse marsRoberBase = bodyResponse.block();
+		System.out.println(marsRoberBase);
 		return marsRoberBase;
 		
   	}
