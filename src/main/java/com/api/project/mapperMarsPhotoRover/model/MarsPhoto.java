@@ -5,17 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarsPhoto {
 
 	private Long id;
-
 	private Integer sol;
-
 	private Cameras camera;
-
+	
 	@JsonProperty("img_src")
 	private String img;
 
 	@JsonProperty("earth_date")
 	private String earth_date;
-
 	private MarsRover rover;
 	
 	public MarsPhoto() {
