@@ -32,6 +32,7 @@ public class ServiceMarsRover {
 		
 		MarsRoverResponse marsResponseBase = bodyResponse.block();
 		List<MarsRoverResponse> dataMars = Arrays.asList(marsResponseBase);
+		System.out.println(dataMars);
  		return dataMars;
 		
   	}
