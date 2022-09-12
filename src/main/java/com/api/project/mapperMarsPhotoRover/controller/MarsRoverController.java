@@ -21,12 +21,18 @@ public class MarsRoverController {
  	}
 	
 	@GetMapping
-	public List<MarsRoverResponse> listAllDataBase(@RequestParam(required=false) String date,
+	public List<MarsRoverResponse> listAllDataBase(
+			@RequestParam(required=false) String date,
 			@RequestParam(required = false) Integer marsSol,
 	        @RequestParam(required = false) String robomars,
 	        @RequestParam(required = false) String camera,
 	        @RequestParam(required = false) Integer page)
 	      {
+		System.out.print(date);
+		System.out.println(marsSol);
+		System.out.println(robomars);
+		System.out.println(camera);
+		System.out.println(page);
 		return service.MarsRoverBase(marsSol, robomars, camera, page);
 	}
 }
