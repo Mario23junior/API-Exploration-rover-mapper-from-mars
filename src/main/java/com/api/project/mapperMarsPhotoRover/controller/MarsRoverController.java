@@ -28,7 +28,7 @@ public class MarsRoverController {
 	        @RequestParam(required = false) String camera,
 	        @RequestParam(required = false) Integer page)
 	      {
-		System.out.print(date);
+		System.out.println(date);
 		System.out.println(marsSol);
 		System.out.println(robomars);
 		System.out.println(camera);
