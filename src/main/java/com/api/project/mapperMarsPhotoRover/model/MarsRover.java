@@ -5,15 +5,15 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MarsRover {
-  
+
 	private Long id;
-	
+
 	@JsonProperty("name")
 	private String nome;
-	
+
 	@JsonProperty("landing_date")
 	private Date landingDate;
-	
+
 	private String status;
 
 	public Long getId() {
@@ -52,7 +52,5 @@ public class MarsRover {
 	public String toString() {
 		return "MarsRover [id=" + id + ", nome=" + nome + ", landingDate=" + landingDate + ", status=" + status + "]";
 	}
-	
-	
-}
 
+}

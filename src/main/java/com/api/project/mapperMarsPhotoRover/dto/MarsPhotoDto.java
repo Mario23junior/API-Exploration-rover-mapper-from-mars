@@ -1,22 +1,20 @@
-package com.api.project.mapperMarsPhotoRover.model;
+package com.api.project.mapperMarsPhotoRover.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MarsPhoto {
+public class MarsPhotoDto {
 
 	private Long id;
 	private Integer sol;
-	private Cameras camera;
-
+ 
 	@JsonProperty("img_src")
 	private String img;
 
 	@JsonProperty("earth_date")
 	private String earth_date;
 
-	private MarsRover rover;
-
-	public MarsPhoto() {
+ 
+	public MarsPhotoDto() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,13 +34,7 @@ public class MarsPhoto {
 		this.sol = sol;
 	}
 
-	public Cameras getCamera() {
-		return camera;
-	}
-
-	public void setCamera(Cameras camera) {
-		this.camera = camera;
-	}
+ 
 
 	public String getImg() {
 		return img;
@@ -59,19 +51,7 @@ public class MarsPhoto {
 	public void setEarth_date(String earth_date) {
 		this.earth_date = earth_date;
 	}
-
-	public MarsRover getRover() {
-		return rover;
-	}
-
-	public void setRover(MarsRover rover) {
-		this.rover = rover;
-	}
-
-	@Override
-	public String toString() {
-		return "MarsPhoto [id=" + id + ", sol=" + sol + ", camera=" + camera + ", img=" + img + ", earth_date="
-				+ earth_date + ", rover=" + rover + "]";
-	}
+ 
+	 
 
 }

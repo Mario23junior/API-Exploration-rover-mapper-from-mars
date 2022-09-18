@@ -3,14 +3,14 @@ package com.api.project.mapperMarsPhotoRover.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Cameras {
- 
+
 	private Long id;
-	
+
 	private String name;
-	
+
 	@JsonProperty("rover_id")
 	private String roverId;
-	
+
 	@JsonProperty("full_name")
 	private String fullName;
 
@@ -51,6 +51,4 @@ public class Cameras {
 		return "Cameras [id=" + id + ", name=" + name + ", roverId=" + roverId + ", fullName=" + fullName + "]";
 	}
 
-	
-	
 }
