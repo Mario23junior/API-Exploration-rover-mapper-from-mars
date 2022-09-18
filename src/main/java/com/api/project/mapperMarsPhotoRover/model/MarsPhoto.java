@@ -13,6 +13,7 @@ public class MarsPhoto {
 
 	@JsonProperty("earth_date")
 	private String earth_date;
+
 	private MarsRover rover;
 	
 	public MarsPhoto() {
