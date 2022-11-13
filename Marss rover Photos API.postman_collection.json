@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "ea3d965c-4dff-41e3-93aa-4b3f75aedfb4",
+		"name": "Marss rover Photos API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10455541"
+	},
+	"item": [
+		{
+			"name": "Mars rover API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/photos/marsrover/?date=2016/1/11&camera=rhaz&marsSol=2000&page=1&robomars=curiosity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"photos",
+						"marsrover",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2016/1/11"
+						},
+						{
+							"key": "camera",
+							"value": "rhaz"
+						},
+						{
+							"key": "marsSol",
+							"value": "2000"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "robomars",
+							"value": "curiosity"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
